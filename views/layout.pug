@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='nav')
+      ul 
+        each val in [['Home', '/'], ['New Recipes', '/newRecipes'], ['New User', '/newUser'], ['Member Sign In', '/memberSignIn']]
+         a(href=val[1])
+           li=val[0]
+block content
