@@ -1,0 +1,30 @@
+/*nav bar*/
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  rgb(206, 24, 24);
+}
+.nav a li {
+  float: left;
+}
+
+.nav a li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav a:hover li {
+  background-color: rgb(206, 24, 24);
+}
+
+
+
+.welcome{
+  font: 18px "Times New Roman", cursive, sans-serif;
+}
+
