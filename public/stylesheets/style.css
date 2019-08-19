@@ -21,10 +21,22 @@
 .nav a:hover li {
   background-color: rgb(206, 24, 24);
 }
-
-
-
-.welcome{
-  font: 18px "Times New Roman", cursive, sans-serif;
+h1 {
+  font: 27px bold "Times New Roman", cursive, sans-serif;
 }
 
+.welcome{
+  font: 22px "Times New Roman", cursive, sans-serif;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+ul{
+  Font: 19px "Times New Roman", cursive, sans-serif;
+  
+  }
+  li{
+    margin: 15px 0;
+  }
