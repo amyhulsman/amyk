@@ -1,10 +1,42 @@
 extends layout
 
 block content
+  div(class="newRecipesBorder")
+    div()
+      h1= 'New Recipes'
+      p.welcome Add new recipe and share!
+      
+    div(class="grid-containerNewRecipes")
+      div(class="leftSideNewRecipes")
+        label Prep time
+        input(type="text" class="left-input")
+        label Cook time
+        input(type="text" class="left-input")
+        label Number of servngs
+        input(type="number" class="left-input")
+        label Recipe Yields
+        input(type="number" class="left-input")
 
-  div()
-    h1= 'New Recipes'
-    p.welcome Add new recipe and share!
-    img(src="/images/", class="scaleImg")
-
-footer ©2019 Amy Krewson-Hulsman & Paul Gephart
+        img(src="/images/recipeBox_recipe-image.png", id="recipe-image")
+      div
+        label Recipe Title
+        input(type="text")
+        br
+        label Description
+        input(type="text")
+        br
+        label Ingredients
+        textarea()
+        br
+        label Directions
+        textarea()
+        br
+        label Recipe Category
+        select
+          option()
+          option() Mexican
+          option() Italian
+          option() Asian
+          option() American
+          option() Other
+          

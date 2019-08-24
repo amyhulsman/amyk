@@ -23,6 +23,7 @@
 }
 h1 {
   font: 27px bold "Times New Roman", cursive, sans-serif;
+  
 }
 
 .welcome{
@@ -40,3 +41,29 @@ ul{
   li{
     margin: 15px 0;
   }
+  /* New Recipes Page */
+.newRecipesBorder {
+  padding: 0 10%;
+}
+.grid-containerNewRecipes{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0 50px;
+}
+label{
+  margin: 10px 5px 10px 5px;
+}
+input{
+  margin: 10px 5px;
+}
+.leftSideNewRecipes {
+  display: grid;
+  grid-template-rows: 3;
+}
+#recipe-image {
+  width: 700px;
+  height: auto;
+}
+.left-input {
+  width: 50px;
+}
