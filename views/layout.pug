@@ -6,7 +6,7 @@ html
   body
     div(class='nav')
       ul 
-        each val in [['Home', '/'], ['New Recipes', '/newRecipes'], ['New User', '/newUser'], ['Member Sign In', '/memberSignIn']]
+        each val in [['Home', '/'], ['New Recipes', '/newRecipes'], ['Recipes', '/recipes']]
          a(href=val[1])
            li=val[0]
 block content
