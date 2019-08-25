@@ -1,0 +1,28 @@
+{
+    "recipes": [
+        {
+            "name": "Kitchen Sink Soup"
+        },
+        {
+            "category": "Tex-Mex"
+        },
+        {
+            "ingredient1": "10 oz. can of condensed tomato soup"
+        },
+        {
+            "ingredient2": "10 oz. can of condensed vegetable beef soup"
+        },
+        {
+            "ingredient3": "8 oz. of mild salsa"
+        },
+        {
+            "ingredient4": "14 oz. can of chili con carne"
+        },
+        {
+            "ingredient5": "15 oz. can of whole sweet kernel corn"
+        },
+        {
+            "directions": "Open all of the cans and pour into a common pot. I use Campbell's soups, Nalley chili, and Pace salsa, but I've used store brands, and they work just fine. (It will need to be a fairly large pot; a 2-quart pot won't hold it all.) When putting in the condensed soup, you will also want to add the water for each can. (I usually use it to rinse the other cans to get the maximum out of them.) You may think that mild salsa is not enough for you, but trust me - it's hotter than you think in soup. Heat it to a boil, then let it cool a bit and serve (ideally with French bread or in a bread bowl)."
+        }
+    ]
+}

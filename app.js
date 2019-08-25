@@ -7,8 +7,17 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var newRecipesRouter = require('./routes/newRecipes');
 var recipesRouter = require('./routes/recipes');
+const apiRouter = require('/.routes.api');
+const recipeRouter = require('.routers.recipe.route');
 
 var app = express();
+
+const DEV_DB_URL = 'mongodb://localhost:27017/recipeBox';
+const mongoDB = prcoess.env.MONGODB_URI || DEV_DB_URL;
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
