@@ -8,6 +8,19 @@ block content
       
     div(class="grid-containerNewRecipes")
       div(class="leftSideNewRecipes")
+        img(src="/images/recipeBox_recipe-image.png", id="recipe-image")
+        //- label Prep time
+        //- input(type="text" class="left-input")
+        //- label Cook time
+        //- input(type="text" class="left-input")
+        //- label Number of servngs
+        //- input(type="number" class="left-input")
+        //- label Recipe Yields
+        //- input(type="number" class="left-input")
+
+      
+      
+      div(class="rightSideNewRecipes")
         label Prep time
         input(type="text" class="left-input")
         label Cook time
@@ -16,23 +29,21 @@ block content
         input(type="number" class="left-input")
         label Recipe Yields
         input(type="number" class="left-input")
-
-        img(src="/images/recipeBox_recipe-image.png", id="recipe-image")
-      div
-        label Recipe Title
-        input(type="text")
         br
-        label Description
-        input(type="text")
+        label(class="recipe-spacing") Recipe Title
+        input(type="text" class="recipe-spacing")
         br
-        label Ingredients
-        textarea()
+        label(class="recipe-spacing") Description
+        input(type="text" class="recipe-spacing")
         br
-        label Directions
-        textarea()
+        label(class="recipe-spacing") Ingredients
+        textarea(class="recipe-spacing")
         br
-        label Recipe Category
-        select
+        label(class="recipe-spacing") Directions
+        textarea(class="recipe-spacing")
+        br
+        label(class="recipe-spacing") Recipe Category
+        select(class="recipe-spacing")
           option()
           option() Mexican
           option() Italian

@@ -5,6 +5,42 @@ block content
   div()
     h1= 'Recipes'
     p.welcome Search our recipes!! 
-    img(src="/images/", class="scaleImg")
+  div(class="grid-containerRecipes")
+    div(class="leftSideRecipes")
+      img(src="/images/recipeBox_porkchops.jpg", id="porkchops")
 
-    
+    div(class="rightSideRecipes")
+      label Recipe Search
+      input(type="text" class="input")
+      label Recipe Category
+      select
+        option()
+        option() Mexican
+        option() Italian
+        option() Asian
+        option() American
+        option() Other
+        
+      each val in [{name: "Mac and Cheese", category: 'American'},{name: "Tacos", category: 'Mexican'}]
+        div(class="card")
+          div()
+            h3=val.name
+            label=val.category
+
+    div(class="details")      
+      h2= details.title
+      p
+        strong Description: 
+        p= details.description
+        strong Ingredients:
+        p= details.ingredients
+        strong Directions:
+        p= details.directions
+        
+      p= "Recipe Category: " + details.category
+      p= "Prep Time: " + details.prepTime
+      p= "Cook Time: " + details.cookTime
+      p= "Number of Servings: " + details.numOfServings
+      p= "Recipe Yields: " + details.yields
+
+

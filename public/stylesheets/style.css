@@ -43,7 +43,7 @@ ul{
   }
   /* New Recipes Page */
 .newRecipesBorder {
-  padding: 0 10%;
+  padding: 10px;
 }
 .grid-containerNewRecipes{
   display:grid;
@@ -60,10 +60,32 @@ input{
   display: grid;
   grid-template-rows: 3;
 }
+
 #recipe-image {
   width: 700px;
   height: auto;
 }
 .left-input {
-  width: 50px;
+  width: 10px;
+}
+/* Recipes Page */
+#porkchops {
+  width: 90%;
+  height: auto;
+}
+.grid-containerRecipes{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.recipe-spacing {
+  margin: 20px 0;
+}
+.card {
+  border: 1px black solid;
+  margin-bottom: 10px;
+  max-width: 600px;
+  padding: 10px;
+}
+.details {
+  padding: 0 10px;
 }
