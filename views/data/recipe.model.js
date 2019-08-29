@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const RecipeSchema = new Schema({
-    recipe: {
-        name: String,
+    recipeName: {
+        type: String,
         required: true,
         max: 100,
     },
-    Category: {
+    category: {
         type: String,
         required: false,
         max: 100,
@@ -118,6 +118,26 @@ const RecipeSchema = new Schema({
         required: true,
         max: 500,
     },
+    prepTime: {
+        type: String,
+        required: false,
+        max: 100,
+    },
+    cookTime: {
+        type: String,
+        required: false,
+        max: 100,
+    },
+    numberOfServings: {
+        type: String,
+        required: false,
+        max: 100,
+    },
+    yields: {
+        type: String,
+        required: false,
+        max: 100,
+    }
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

@@ -1,4 +1,4 @@
-const Recipe = require('../data/recipe.model');
+const Recipe = require('../../views/data/recipe.model');
 
 exports.listRecipes = (req, res) => {
     Recipe.find((err, recipes) => {
