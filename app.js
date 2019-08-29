@@ -14,8 +14,8 @@ const recipeRouter = require('./routes/recipe.route');
 var app = express();
 
 const DEV_DB_URL = 'mongodb://localhost:27017/recipeBox';
-const mongoDB = prcoess.env.MONGODB_URI || DEV_DB_URL;
-mongoose.connect(mongoDB);
+const mongoDB = process.env.MONGODB_URI || DEV_DB_URL;
+mongoose.connect(mongoDB, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error'));

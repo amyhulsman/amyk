@@ -31,20 +31,21 @@ exports.addRecipe = (req, res) => {
         ingredient20: req.body.ingredient,
         directions: req.body.directions
     });
-    
+
     recipe.save((err) => {
         if (err) {
             return next(err);
         }
         res.send('Recipe added successfully');
     });
+};
 
     exports.recipeDetails = (req, res) => {
         Recipe.findById(req.params.id, (err, recipe) => {
             if (err) return next(err);
             res.send(recipe);
-    });
-
+        });
+    };
     exports.updateRecipe = (req, res) => {
         Recipe.findByIdAndUpdate(req.params.id, {
             $set: req.body,
@@ -58,5 +59,4 @@ exports.addRecipe = (req, res) => {
         if (err) return next(err);
         res.send('Deleted successfully!');
     };
-};
-}
+
