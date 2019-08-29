@@ -21,7 +21,7 @@ block content
         option() American
         option() Other
         
-      each val in [{name: "Mac and Cheese", category: 'American'},{name: "Tacos", category: 'Mexican'}]
+      each val in recipeList
         div(class="card")
           div()
             h3=val.name
