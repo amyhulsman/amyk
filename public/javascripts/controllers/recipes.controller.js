@@ -11,6 +11,28 @@ exports.listOfRecipes = (req, res) => {
     });
 };
 
+exports.addRecipe = (req, res) => {
+    var recipe = new Recipe({
+        name: req.body.name,
+        description: req.body.description,
+        ingredients: req.body.ingredients,
+        directions: req.body.directions,
+        category: req.body.category,
+        prep_time: req.body.prep_time,
+        cook_time: req.body.cook_time,
+        number_of_servings: req.body.number_of_servings
+    });
+    console.log(req);
+    recipe.save(function (err, savedRecipe) {
+        if (err) {
+            console.log("Create Recipe Error:");
+            console.log(err);
+        }
+        console.log(savedRecipe);
+    });
+    res.redirect("/recipes-data");
+}
+
 exports.loadRecipes = (req, res) => {
     var newRecipe = new Recipe(
         {
@@ -30,7 +52,7 @@ exports.loadRecipes = (req, res) => {
             console.log("CreateRecipe Error:");
             console.log(err);
         } else {
-            // console.log(savedRecipe);
+            console.log(savedRecipe);
         }
     });
 

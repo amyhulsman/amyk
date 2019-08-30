@@ -5,6 +5,6 @@ const recipesController = require('../public/javascripts/controllers/recipes.con
 
 router.get('/', recipesController.listOfRecipes);
 router.get('/load', recipesController.loadRecipes);
-
+router.get('/add', recipesController.addRecipe);
 
 module.exports = router;

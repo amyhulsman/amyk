@@ -5,3 +5,10 @@ exports.getRecipes = () => {
         .then(res => res.json())
         .then(json => json);
 };
+
+exports.add = (recipe) => {
+    // return fetch('http://localhost:3000/recipes-data', { method: 'POST', body: recipe })
+    //     .then(res => res.json())
+    //     .then(json => console.log(json));
+    console.log('hello there')
+};

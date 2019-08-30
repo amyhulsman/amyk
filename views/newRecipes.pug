@@ -1,53 +1,81 @@
 extends layout
 
 block content
+  script.
+    function sendRecipe(recipe) {
+       var xmlhttp = new XMLHttpRequest();
+       xmlhttp.open("GET", '/recipes-data/add', true);
+       xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+       xmlhttp.onstatechange = function() {
+         if (xmlhttp.status === 200) {
+           console.log(recipe);
+         }
+       }
+       xmlhttp.send(recipe);
+    }
+    function submit() {
+      var recipe = {
+        name: document.getElementById('title').value,
+        description: document.getElementById('description').value,
+        ingredients: [],
+        directions: document.getElementById('directions').value,
+        category: document.getElementById('category').value,
+        prep_time: parseInt(document.getElementById('prep').value),
+        cook_time: parseInt(document.getElementById('cook').value),
+        number_of_servings: parseInt(document.getElementById('servings').value)
+
+      };
+      var ingredients = document.getElementsByClassName('ingredients');
+      for (var i = 0; i < ingredients.length; i++) {
+        recipe.ingredients.push({ingredient: ingredients[i].value});
+      }
+
+      sendRecipe(recipe);
+    }
+    function addIngredient() {
+      var input = "<input type='text' class='recipe-spacing ingredients' /><br>";
+      var ingredientsDiv = document.getElementById('ingredientHTML');
+      ingredientsDiv.insertAdjacentHTML( 'beforeend', input );
+    }
+
   div(class="newRecipesBorder")
     div()
       h1= 'New Recipes'
       p.welcome Add new recipe and share!
-      
+
     div(class="grid-containerNewRecipes")
       div(class="leftSideNewRecipes")
-        img(src="/images/recipeBox_recipe-image.png", id="recipe-image")
-        //- label Prep time
-        //- input(type="text" class="left-input")
-        //- label Cook time
-        //- input(type="text" class="left-input")
-        //- label Number of servngs
-        //- input(type="number" class="left-input")
-        //- label Recipe Yields
-        //- input(type="number" class="left-input")
+        img(src="/images/recipeBox_recipe-image.png", id="recipe-image")     
 
-      
-      
       div(class="rightSideNewRecipes")
         label Prep time
-        input(type="text" class="left-input")
+        input(type="text" class="left-input" id="prep")
         label Cook time
-        input(type="text" class="left-input")
+        input(type="text" class="left-input" id="cook")
         label Number of servngs
-        input(type="number" class="left-input")
-        label Recipe Yields
-        input(type="number" class="left-input")
+        input(type="number" class="left-input" id="servings")
         br
         label(class="recipe-spacing") Recipe Title
-        input(type="text" class="recipe-spacing")
+        input(type="text" class="recipe-spacing" id="title")
         br
         label(class="recipe-spacing") Description
-        input(type="text" class="recipe-spacing")
+        input(type="text" class="recipe-spacing" id="description")
         br
         label(class="recipe-spacing") Ingredients
-        textarea(class="recipe-spacing")
+        input(type="text" class="recipe-spacing ingredients")
+        div(id="ingredientHTML" class="additional-ingredients")
+        button(type="button" onclick="addIngredient()") add
         br
         label(class="recipe-spacing") Directions
-        textarea(class="recipe-spacing")
+        textarea(class="recipe-spacing" id="directions")
         br
         label(class="recipe-spacing") Recipe Category
-        select(class="recipe-spacing")
+        select(class="recipe-spacing" id="category")
           option()
           option() Mexican
           option() Italian
           option() Asian
           option() American
           option() Other
-          
+
+        button(type="button" onclick="submit()") submit
